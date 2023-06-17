@@ -8,10 +8,11 @@ let arr = [
 
 function PrintDeveloperbyMap() {
   //Write your code here , just console.log
-  arr.map((x) => {
+  let developer= arr.map((x) => {
     if (x.profession=="developer") {
-      console.log(x);
+      return x;
     }
+    console.log(developer);
   });
 
   
@@ -36,19 +37,23 @@ function addData() {
 
 function removeAdmin() {
   //Write your code here, just console.log
-      arr = arr.filter((e) => e.profession == "admin");
-  console.log(arr);
+    let noAdmin=  arr = arr.filter((e) =>
+      if (e.profession !== "admin"){
+      return e;
+    };
+  console.log(noAdmin);
 }
 }
 
-function concatenateArray() {
+ function concatenateArray() {
   //Write your code here, just console.log
-  let arr = [
-  { id: 4, name: "ben", age: "21", profession: "admin" },
-  { id: 5, name: "david", age: "22", profession: "developer" },
-  { id: 6, name: "mary", age: "20", profession: "admin" },
-];
-    const concatenateArray = arr.concat(newArr);
-  console.log(concatenateArray);
-
+  //Create another array with three different objects
+  let anotherArray = [
+    { id: 5, name: "raj", age: "21", profession: "tester" },
+    { id: 6, name: "priya", age: "22", profession: "designer" },
+    { id: 7, name: "ali", age: "23", profession: "manager" },
+  ];
+  //Concatenate the two arrays using the concat method
+  let concatenatedArray = arr.concat(anotherArray);
+  console.log(concatenatedArray);
 }
